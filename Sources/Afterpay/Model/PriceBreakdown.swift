@@ -54,7 +54,7 @@ struct PriceBreakdown {
     let withText = showWithText ? Afterpay.string.localized.with : ""
 
     if let formattedPayment = formattedPayment, inRange {
-      badgePlacement = .end
+      badgePlacement = .start
 
       string = String.localizedStringWithFormat(
         Afterpay.string.localized.availableTemplate,
@@ -71,7 +71,7 @@ struct PriceBreakdown {
         formattedMinimum, formattedMaximum
       )
     } else {
-      badgePlacement = .end
+      badgePlacement = .start
       string = Afterpay.string.localized.orPayWith
     }
   }

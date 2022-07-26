@@ -146,6 +146,8 @@ public final class PriceBreakdownView: UIView {
       if let viewController = self?.delegate?.viewControllerForPresentation() {
         let infoWebViewController = InfoWebViewController(infoURL: url)
         let navigationController = UINavigationController(rootViewController: infoWebViewController)
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
         viewController.present(navigationController, animated: true, completion: nil)
       } else {
         UIApplication.shared.open(url)
@@ -219,7 +221,7 @@ public final class PriceBreakdownView: UIView {
       return .init(attachment: attachment)
     }()
 
-    let space = NSAttributedString(string: " ", attributes: textAttributes)
+    let space = NSAttributedString(string: "   ", attributes: textAttributes)
 
     let priceBreakdown = PriceBreakdown(
       totalAmount: totalAmount,
