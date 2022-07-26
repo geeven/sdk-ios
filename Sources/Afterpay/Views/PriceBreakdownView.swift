@@ -24,6 +24,9 @@ public protocol PriceBreakdownViewDelegate: AnyObject {
 /// as well as changes to the `totalAmount`.
 public final class PriceBreakdownView: UIView {
 
+  // 默认系统： 0 ｜ 1: 商品详情页 ｜ 2支付页
+  public var positionType:Int = 0
+  
   /// The price breakdown view delegate. Not setting this delegate will cause the info link to open
   /// externally.
   public weak var delegate: PriceBreakdownViewDelegate?
@@ -184,14 +187,20 @@ public final class PriceBreakdownView: UIView {
       logoView = BadgeView(colorScheme: logoColorScheme)
     }
 
-    let font: UIFont = fontProvider(traitCollection)
+    var font: UIFont = fontProvider(traitCollection)
+    if positionType == 2 {
+      font = UIFont.systemFont(ofSize: 14)
+    }
     let fontHeight = font.ascender - font.descender
     let logoHeight = fontHeight * CGFloat(logoType.heightMultiplier)
 
     let logoRatio = logoView.ratio ?? 1
 
     let widthFittingFont = logoHeight / logoRatio
-    let width = widthFittingFont > logoView.minimumWidth ? widthFittingFont : logoView.minimumWidth
+    var width = widthFittingFont > logoView.minimumWidth ? widthFittingFont : logoView.minimumWidth
+    if positionType == 2 {
+      width = 40
+    }
     let size = CGSize(width: width, height: width * logoRatio)
 
     logoView.frame = CGRect(origin: .zero, size: size)
