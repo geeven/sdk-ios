@@ -14,6 +14,7 @@
 		157E88D125CBCA49007E54C4 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E88D025CBCA49007E54C4 /* Result+Fold.swift */; };
 		15EC67D225E6217F007DFEA8 /* OSLog+Afterpay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC67D125E6217F007DFEA8 /* OSLog+Afterpay.swift */; };
 		15F7DDB725393BD30011EC25 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F7DDB625393BD30011EC25 /* CurrencyFormatter.swift */; };
+		2FD8112328913C3E0099C8E2 /* JJInfoWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8112228913C3E0099C8E2 /* JJInfoWebViewController.swift */; };
 		42087EE727A746F700BE5442 /* MoreInfoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42087EE627A746F700BE5442 /* MoreInfoOptions.swift */; };
 		42270B6F27A3B24200C9BCBF /* ModalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42270B6E27A3B24200C9BCBF /* ModalTheme.swift */; };
 		4288AB7427BC8B60009C9B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4288AB7327BC8B60009C9B69 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		15EC67D125E6217F007DFEA8 /* OSLog+Afterpay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Afterpay.swift"; sourceTree = "<group>"; };
 		15F7DDB625393BD30011EC25 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		15FAC56625DCCEDF00DE7792 /* Afterpay.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Afterpay.podspec; sourceTree = "<group>"; };
+		2FD8112228913C3E0099C8E2 /* JJInfoWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJInfoWebViewController.swift; sourceTree = "<group>"; };
 		42087EE627A746F700BE5442 /* MoreInfoOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoOptions.swift; sourceTree = "<group>"; };
 		42270B6E27A3B24200C9BCBF /* ModalTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTheme.swift; sourceTree = "<group>"; };
 		4288AB7327BC8B60009C9B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				946388FD24DD077F00A1227A /* InfoWebViewController.swift */,
+				2FD8112228913C3E0099C8E2 /* JJInfoWebViewController.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				15EC67D225E6217F007DFEA8 /* OSLog+Afterpay.swift in Sources */,
 				4288AB7827BCB578009C9B69 /* PaymentButtonUIView.swift in Sources */,
 				551BEDEB25F983E200FDF9EE /* Features.swift in Sources */,
+				2FD8112328913C3E0099C8E2 /* JJInfoWebViewController.swift in Sources */,
 				66F9767C2499A11A001D38FA /* Afterpay.swift in Sources */,
 				151A4FEB258C1F8A0046CEEE /* StaticContent.swift in Sources */,
 				66EE378724D39FC50029BF42 /* BadgeView.swift in Sources */,

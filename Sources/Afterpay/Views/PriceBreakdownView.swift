@@ -147,11 +147,16 @@ public final class PriceBreakdownView: UIView {
   private func sharedInit() {
     linkTextView.linkHandler = { [weak self] url in
       if let viewController = self?.delegate?.viewControllerForPresentation() {
-        let infoWebViewController = InfoWebViewController(infoURL: url)
-        let navigationController = UINavigationController(rootViewController: infoWebViewController)
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        viewController.present(navigationController, animated: true, completion: nil)
+        if #available(iOS 13.0, *) {
+          let infoWebViewController = JJInfoWebViewController(infoURL: url)
+          viewController.present(infoWebViewController, animated: true, completion: nil)
+        }else {
+          let infoWebViewController = InfoWebViewController(infoURL: url)
+          let navigationController = UINavigationController(rootViewController: infoWebViewController)
+          navigationController.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
+          navigationController.navigationBar.shadowImage = UIImage()
+          viewController.present(navigationController, animated: true, completion: nil)
+        }
       } else {
         UIApplication.shared.open(url)
       }
