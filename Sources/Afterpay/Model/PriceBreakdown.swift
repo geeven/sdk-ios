@@ -9,7 +9,6 @@
 import Foundation
 
 struct PriceBreakdown {
-
   enum BadgePlacement: Equatable {
     case start
     case end
@@ -22,7 +21,9 @@ struct PriceBreakdown {
     totalAmount: Decimal,
     introText: AfterpayIntroText = AfterpayIntroText.or,
     showInterestFreeText: Bool = true,
-    showWithText: Bool = true
+    showWithText: Bool = true,
+    // 默认系统： 0 ｜ 1: 商品详情页 ｜ 2支付页
+    positionType: Int = 0
   ) {
     let configuration = getConfiguration()
     let formatter = configuration
@@ -54,7 +55,12 @@ struct PriceBreakdown {
     let withText = showWithText ? Afterpay.string.localized.with : ""
 
     if let formattedPayment = formattedPayment, inRange {
-      badgePlacement = .start
+      if positionType == 1 {
+        badgePlacement = .start
+      } else {
+        badgePlacement = .end
+      }
+      
 
       string = String.localizedStringWithFormat(
         Afterpay.string.localized.availableTemplate,
