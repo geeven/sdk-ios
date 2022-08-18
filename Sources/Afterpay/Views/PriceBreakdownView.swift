@@ -193,9 +193,9 @@ public final class PriceBreakdownView: UIView {
     }
 
     var font: UIFont = fontProvider(traitCollection)
-    if positionType == 2 {
+//    if positionType == 2 {
       font = UIFont.systemFont(ofSize: 14)
-    }
+//    }
     let fontHeight = font.ascender - font.descender
     let logoHeight = fontHeight * CGFloat(logoType.heightMultiplier)
 
