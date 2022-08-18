@@ -87,7 +87,7 @@ public final class PriceBreakdownView: UIView {
     var heightMultiplier: Double {
       switch self {
       case .badge:
-        return 1.8
+        return 1.2
       case .lockup:
         return 1
       }
