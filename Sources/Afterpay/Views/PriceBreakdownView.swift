@@ -204,10 +204,13 @@ public final class PriceBreakdownView: UIView {
     let logoRatio = logoView.ratio ?? 1
 
     let widthFittingFont = logoHeight / logoRatio
-    let width = widthFittingFont > logoView.minimumWidth ? widthFittingFont : logoView.minimumWidth
+    var width = widthFittingFont > logoView.minimumWidth ? widthFittingFont : logoView.minimumWidth
 //    if positionType == 2 {
 //      width = 40
 //    }
+    if logoType == .lockup {
+      width = width*0.75
+    }
     let size = CGSize(width: width, height: width * logoRatio)
 
     logoView.frame = CGRect(origin: .zero, size: size)
